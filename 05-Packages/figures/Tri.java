@@ -5,10 +5,8 @@ import java.awt.*;
 public class Tri {
     
     int xx, xy, yx, yy, zx, zy; 
-    Color fillColor, drawColor;
 
-    public Tri(int xx, int xy, int yx, int yy
-        ,int zx, int zy){
+    public Tri(int xx, int xy, int yx, int yy,int zx, int zy){
         this.xx = xx;
         this.xy = xy;
         this.yx = yx;
@@ -24,7 +22,6 @@ public class Tri {
 
     public void paint (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        g2d.drawPolygon(new int[]{this.xx,this.yx,this.zx}, new int[]{xy,yy,zy}, 3);
-        
+        g2d.drawPolygon(new int[]{this.xx,this.yx,this.zx}, new int[]{xy,yy,zy}, 3);   
     }
 }
