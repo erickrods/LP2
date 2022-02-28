@@ -1,7 +1,6 @@
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
-
 import figures.*;
 
 class PackApp {
@@ -26,11 +25,11 @@ class PackFrame extends JFrame {
         );
         this.setTitle("Java Packages");
         this.setSize(350, 350);
-        this.r1 = new Rect(50,50, 100,30);
-        this.r2 = new Rect(100,170, 60,70);
-        this.e1 = new Ellipse(50,100, 100,30);
-        this.e2 = new Ellipse(150,220, 90,90);
-        this.t1 = new Tri(140,170,240,95,290,170);
+        this.r1 = new Rect(50,50, 100,30, Color.gray, Color.magenta);
+        this.r2 = new Rect(100,170, 60,70, Color.white, Color.black);
+        this.e1 = new Ellipse(50,100, 100,30, Color.yellow, Color.blue);
+        this.e2 = new Ellipse(150,220, 90,90, Color.green, Color.DARK_GRAY);
+        this.t1 = new Tri(140,170,240,95,290,170, Color.red, Color.yellow);
     }
 
     public void paint (Graphics g) {
