@@ -8,7 +8,6 @@ public class Rect extends Figure {
 
     public Rect (int x, int y, int h, int w) {
         super(x, y, h, w);
-
     }
 
     public void print () {

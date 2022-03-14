@@ -6,7 +6,7 @@ import java.util.Random;
 
 import figures.*;
 
-class ListApp {
+public class ListApp {
     public static void main (String[] args) {
         ListFrame frame = new ListFrame();
         frame.setVisible(true);
@@ -43,15 +43,6 @@ class ListFrame extends JFrame {
                             int h = rand.nextInt(400);
                             Ellipse e = new Ellipse(x,y ,w,h);
                             figs.add(new Ellipse(x,y, w,h));
-                        } else if (evt.getKeyChar()=='q'){
-                            int xx = rand.nextInt(400);
-                            int xy = rand.nextInt(400);
-                            int yx = rand.nextInt(400);
-                            int yy = rand.nextInt(400);
-                            int zx = rand.nextInt(400);
-                            int zy = rand.nextInt(400);
-                            Tri q = new Tri(xx,xy,yx,yy,zx,zy);
-                            figs.add(new Tri(xx,xy,yx,yy,zx,zy));
                         }
                         repaint();
                     }
