@@ -65,9 +65,9 @@ Ellipse* ellipse_new (int x, int y, int w, int h, int zx,int zy) {
 
 void main (void) {
     Figure* figs[4] = {
-        (Figure*) ellipse_new(40,10,140,300,0,0),
+        (Figure*) ellipse_new(40,10,140,300),
         (Figure*) tri_new(140,170,240,95,290,170),
-        (Figure*) ellipse_new(210,110,305,130,0,0),
+        (Figure*) ellipse_new(210,110,305,130),
         (Figure*) tri_new(140,40,200,60,120,140)
     };
 
