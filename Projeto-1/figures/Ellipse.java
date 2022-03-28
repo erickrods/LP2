@@ -1,11 +1,12 @@
 package figures;
+
 import java.awt.*;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Ellipse2D.Double;
 
 public class Ellipse extends Figure {
-    int x, y;
-    int h, w;
+   /*int x, y;
+    int h, w;*/
 
     public Ellipse (int x, int y, int h, int w) {
         super(x, y, h, w);

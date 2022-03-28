@@ -1,19 +1,20 @@
 package figures;
+
 import java.awt.*;
 
-public class Tri extends Figure{
-    
-    int xx, xy, yx, yy, zx, zy;
+public class Tri extends Figure {
 
-    public Tri(int xx, int xy, int yx, int yy,int zx, int zy){
-        this.xx = xx;
+
+    public Tri(int x, int y, int h, int w) { super(x, y, h, w);}
+
+        /*this.xx = xx;
         this.xy = xy;
         this.yx = yx;
         this.yy = yy;
         this.zx = zx;
         this.zy = zy;
 
-    }
+    }  */
 
     public void print () {
         System.out.format("Triangulo na posicao (%d,%d, %d).\n",
