@@ -27,11 +27,14 @@ class ListFrame extends JFrame {
         this.addKeyListener (
                 new KeyAdapter() {
                     public void keyPressed(KeyEvent evt) {
-                        PointerInfo a = MouseInfo.getPointerInfo();
+                        Point p = MouseInfo.getPointerInfo().getLocation();
+                        int x = p.x - getLocation().x;
+                        int y = p.y - getLocation().y;
+                        /*PointerInfo a = MouseInfo.getPointerInfo();
                         Point b = a.getLocation();
                         int x = (int) b.getX();
                         int y = (int) b.getY();
-                        Point localMouse = MouseInfo.getPointerInfo().getLocation();
+                        Point localMouse = MouseInfo.getPointerInfo().getLocation();*/
                         if (evt.getKeyChar() == 'r') {
                             Rect r = new Rect(x, y, 140, 100, Color.BLACK, Color.WHITE);
                             figs.add(r);
@@ -41,7 +44,7 @@ class ListFrame extends JFrame {
                             figs.add(e);
                             repaint();
                         } else if (evt.getKeyChar() == 't') {
-                            Tri t = new Tri(x, y, 120, 60, Color.YELLOW, Color.MAGENTA );
+                            Tri t = new Tri(x, y, 120, 60, Color.BLACK, Color.WHITE);
                             figs.add(t);
                             repaint();
                         } else if (evt.getKeyChar() == 'l') {
