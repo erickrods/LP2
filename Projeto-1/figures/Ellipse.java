@@ -21,14 +21,12 @@ public class Ellipse extends Figure {
     }
     @Override
     public void paint (Graphics g) {
-
-        Graphics2D g2d = (Graphics2D) g;
         this.ellipse = new Ellipse2D.Double(this.x, this.y, this.h, this.w);
+        Graphics2D g2d = (Graphics2D) g;
         g2d.setStroke(new BasicStroke(grossuraPadrao));
         g2d.setColor(borderColor);
         g2d.draw(ellipse);
         g2d.setColor(fillColor);
         g2d.fill(ellipse);
-
     }
 }

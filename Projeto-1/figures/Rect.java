@@ -15,7 +15,6 @@ public class Rect extends Figure {
         super(x, y, h, w, Color.BLACK, Color.WHITE);
         this.rect = new Rectangle(this.x, this.y, this.h, this.w);
     }
-
         public void print () {
         System.out.format("Retangulo de tamanho (%d,%d) na posicao (%d,%d).\n",
             this.w, this.h, this.x, this.y);
@@ -23,7 +22,7 @@ public class Rect extends Figure {
     @Override
     public void paint (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
-        g2d.setStroke(new BasicStroke(grossuraPadrao));
+        g2d.setStroke(new BasicStroke(grossuraPadrao/2));
         g2d.setColor(fillColor);
         g2d.fillRect(this.x, this.y, this.h, this.w);
         g2d.setColor(borderColor);

@@ -1,33 +1,52 @@
 package figures;
+import javax.sound.sampled.Line;
 import java.awt.*;
 import java.awt.geom.*;
+import java.awt.geom.Line2D.Float;
+import java.util.Random;
 
 public class Linha extends Figure {
-    private int x, y;
-    private int h, w;
-    private Color borderColor;
+    public int x, y;
+    public int h, w;
+    public Color borderColor;
     Line2D linha;
 
-    public Linha(int x, int y, int h, int w, Color borderColor, Color fillColor) {
+
+    public Linha (int x, int y, int h, int w, Color borderColor, Color fillColor) {
         super(x, y, h, w, borderColor, null);
         this.x = x;
         this.y = y;
-        this.h = x + h;
+        this.h = h +x;
         this.w = w + y;
-        this.borderColor = Color.BLACK;
-        this.linha = new Line2D.Float(this.x, this.y, this.h, this.w);
+        this.borderColor = borderColor;
+        this.linha = new Line2D.Float(x, y, h+x, w+y); //(x, y, h+x, w+y);
     }
+    public Linha (int x, int y, int h, int w){
+        super(x, y, h+x, w+y, Color.BLACK, null);
+        this.linha = new Line2D.Float(x, y, h+x, w+y);
 
-
+    }
     public void print () {
-        System.out.format("Linha de tamanho (%d,%d) na posicao (%d,%d).\n",
-                this.w, this.h, this.x, this.y);
+    }
+    @Override
+    public void mover(int dx,int dy){
+        super.mover(0,0);
+        this.x += dx;
+        this.h += dx;
+        this.y += dy;
+        this.w += dy;
+    }
+    @Override
+    public void corBorda(Color cor) {
+        super.corBorda(cor);
+        this.borderColor = cor;
     }
     @Override
     public void paint (Graphics g) {
+        this.linha = new Line2D.Float(this.x, this.y, this.h , this.w);
         Graphics2D g2d = (Graphics2D) g;
         g2d.setStroke(new BasicStroke(grossuraPadrao));
         g2d.setColor(borderColor);
-        g2d.drawLine(this.x, this.y, this.h, this.w);
-    }
+        g2d.draw(this.linha);
+        }
 }

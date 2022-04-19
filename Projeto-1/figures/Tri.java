@@ -33,9 +33,10 @@ public class Tri extends Figure {
             this.triangulo = new Polygon(arrayX, arrayY, 3);
             Graphics2D g2d = (Graphics2D) g;
             g2d.setStroke(new BasicStroke(grossuraPadrao));
-            g2d.drawPolygon(triangulo);
-            //g2d.setColor(fillColor);
-            //g2d.FillPolygon(triangulo);
+            g2d.setColor(borderColor);
+            g2d.drawPolygon(this.triangulo);
+            g2d.setColor(fillColor);
+            g2d.fillPolygon(this.triangulo);
 
         }
     public void print () {
