@@ -1,7 +1,7 @@
 
 # Projeto Gráfico
 
-#Comandos
+### Comandos
 
 l = Desenha uma linha
 
