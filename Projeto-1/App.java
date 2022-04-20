@@ -31,6 +31,8 @@ class ListFrame extends JFrame {
         private static final int left = 37;
         private static final int right = 39;
         private static final int delete = 127;
+        private static final int maior = 112;
+        private static final int menor = 113;
     }
     ListFrame () {
         this.addWindowListener (
@@ -84,10 +86,17 @@ class ListFrame extends JFrame {
                             }else if (evt.getKeyCode() == teclaCodigo.delete) {
                                 figs.remove(figuraSelecionada);
                                 figuraSelecionada = null;
+                            }else if (evt.getKeyCode() == teclaCodigo.maior) {
+                            figuraSelecionada.alterarTamanho(5,5);
+                            repaint();
+                            }else if (evt.getKeyCode() == teclaCodigo.menor) {
+                            figuraSelecionada.alterarTamanho(-5,-5);
+                            repaint();
                             }
                             repaint();
                         }
                 }
+
         );
         this.addMouseListener(
                 new MouseAdapter() {

@@ -34,7 +34,10 @@ public abstract class Figure {
     public boolean clicked(int x, int y) {
         return (this.x <= x && x <= this.x + this.w && this.y <= y && y <= this.y + this.w);
     }
-
+    public void alterarTamanho(int x, int y){
+        this.h += x;
+        this.w += y;
+    }
     public void corInterior(Color cor) {
         this.fillColor = cor;
     }

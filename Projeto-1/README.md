@@ -1,7 +1,7 @@
 
 # Projeto Gráfico
 
-### Comandos
+### Comandos:
 
 l = Desenha uma linha
 
@@ -26,3 +26,7 @@ PageUP = Muda cor da borda
 PageDown = Muda cor de preenchimento
 
 Arrastar = Move figura
+
+F1 = Auementar tamanho da figura
+
+F2 = Dimunuir tamanho da figura
