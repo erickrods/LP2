@@ -25,8 +25,8 @@ PageUP = Muda cor da borda
 
 PageDown = Muda cor de preenchimento
 
-Arrastar = Move figura
-
 F1 = Aumentar tamanho da figura
 
 F2 = Dimunuir tamanho da figura
+
+Arrastar = Move figura
