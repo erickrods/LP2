@@ -27,6 +27,6 @@ PageDown = Muda cor de preenchimento
 
 Arrastar = Move figura
 
-F1 = Auementar tamanho da figura
+F1 = Aumentar tamanho da figura
 
 F2 = Dimunuir tamanho da figura
