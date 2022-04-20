@@ -30,7 +30,7 @@ public class Linha extends Figure {
     }
     @Override
     public void mover(int dx,int dy){
-        super.mover(0,0);
+        super.mover(dx,dy);
         this.x += dx;
         this.h += dx;
         this.y += dy;
