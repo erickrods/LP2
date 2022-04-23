@@ -18,6 +18,13 @@ public class Tri extends Figure {
         int yValores[] = {yx, yy, yz};
     }
     @Override
+    public void foco(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setStroke(new BasicStroke(1.8f));
+        g2d.setColor(Color.RED);
+        g2d.drawRect(this.x, this.y, this.w, this.h);
+    }
+    @Override
     public void paint (Graphics g) {
             int xx = this.x;
             int yx = this.y;

@@ -30,9 +30,14 @@ public abstract class Figure {
         this.x += dx;
         this.y += dy;
     }
-
+    public void foco(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setStroke(new BasicStroke(1.8f));
+        g2d.setColor(Color.RED);
+        g2d.drawRect(this.x, this.y, this.h, this.w);
+    }
     public boolean clicked(int x, int y) {
-        return (this.x <= x && x <= this.x + this.w && this.y <= y && y <= this.y + this.w);
+        return (this.x <= x && x <= this.x + this.w && this.y <= y && y <= this.y + this.h);
     }
     public void alterarTamanho(int x, int y){
         this.h += x;

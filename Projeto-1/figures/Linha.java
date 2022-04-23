@@ -19,7 +19,7 @@ public class Linha extends Figure {
         this.h = h +x;
         this.w = w + y;
         this.borderColor = borderColor;
-        this.linha = new Line2D.Float(x, y, h+x, w+y); //(x, y, h+x, w+y);
+        this.linha = new Line2D.Float(x, y, h+x, w+y);
     }
     public Linha (int x, int y, int h, int w){
         super(x, y, h+x, w+y, Color.BLACK, null);
@@ -35,11 +35,6 @@ public class Linha extends Figure {
         this.h += dx;
         this.y += dy;
         this.w += dy;
-    }
-    @Override
-    public void alterarTamanho(int x, int y){
-        this.h += x;
-        this.w += y;
     }
     @Override
     public void corBorda(Color cor) {

@@ -106,7 +106,6 @@ class ListFrame extends JFrame {
                         for (int i = 0; i < figs.size(); i++) {
                             if (figs.get(i).clicked(posicaoMouse.x, posicaoMouse.y)) {
                                 figuraSelecionada = figs.get(i);
-                                figuraSelecionada.borderColor = Color.RED;
                             } else {
                                 for (int j = 0; j < figs.size(); j++) {
                                         figs.get(j).borderColor = figs.get(j).borderColor;
@@ -117,7 +116,6 @@ class ListFrame extends JFrame {
                                 figs.remove(figuraSelecionada);
                                 figs.add(figuraSelecionada);
                                 auxSelecionada = figuraSelecionada;
-                                figuraSelecionada.borderColor = Color.RED;
                                 repaint();
                             } else if (figuraSelecionada != auxSelecionada) {
                                 figs.remove(auxSelecionada);
@@ -152,6 +150,9 @@ class ListFrame extends JFrame {
         super.paint(g);
         for (Figure fig: this.figs) {
             fig.paint(g);
+        }
+        if (figuraSelecionada != null){
+            figuraSelecionada.foco(g);
         }
     }
 }
