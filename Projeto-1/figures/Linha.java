@@ -37,6 +37,11 @@ public class Linha extends Figure {
         this.w += dy;
     }
     @Override
+    public void alterarTamanho(int x, int y){
+        this.h += x;
+        this.w += y;
+    }
+    @Override
     public void corBorda(Color cor) {
         super.corBorda(cor);
         this.borderColor = cor;
