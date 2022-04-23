@@ -37,7 +37,7 @@ public abstract class Figure {
         g2d.drawRect(this.x, this.y, this.h, this.w);
     }
     public boolean clicked(int x, int y) {
-        return (this.x <= x && x <= this.x + this.w && this.y <= y && y <= this.y + this.h);
+        return (x >= this.x) && (x <= this.x + this.h) && (y >= this.y) && (y <= this.y + this.w);
     }
     public void alterarTamanho(int x, int y){
         this.h += x;
