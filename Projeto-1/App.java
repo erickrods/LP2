@@ -1,4 +1,3 @@
-import java.awt.*;
 import java.awt.event.*;
 import java.awt.Point;
 import javax.swing.*;
@@ -9,6 +8,7 @@ import java.awt.Graphics;
 import java.util.Random;
 
 import figures.*;
+import ivisible.*;
 
 public class App {
     public static void main (String[] args) {
@@ -79,22 +79,22 @@ class ListFrame extends JFrame {
                             repaint();
                         } else if (evt.getKeyCode() == teclaCodigo.pageUP) {
                             figuraSelecionada.corBorda(corAleatoria);
-                                repaint();
-                            }else if (evt.getKeyCode() == teclaCodigo.pageDOWN) {
+                            repaint();
+                        }else if (evt.getKeyCode() == teclaCodigo.pageDOWN) {
                             figuraSelecionada.corInterior(corAleatoria);
                             repaint();
-                            }else if (evt.getKeyCode() == teclaCodigo.delete) {
-                                figs.remove(figuraSelecionada);
-                                figuraSelecionada = null;
-                            }else if (evt.getKeyCode() == teclaCodigo.maior) {
+                        }else if (evt.getKeyCode() == teclaCodigo.delete) {
+                            figs.remove(figuraSelecionada);
+                            figuraSelecionada = null;
+                        }else if (evt.getKeyCode() == teclaCodigo.maior) {
                             figuraSelecionada.alterarTamanho(5,5);
                             repaint();
-                            }else if (evt.getKeyCode() == teclaCodigo.menor) {
+                        }else if (evt.getKeyCode() == teclaCodigo.menor) {
                             figuraSelecionada.alterarTamanho(-5,-5);
                             repaint();
-                            }
-                            repaint();
                         }
+                        repaint();
+                    }
                 }
 
         );
@@ -108,37 +108,37 @@ class ListFrame extends JFrame {
                                 figuraSelecionada = figs.get(i);
                             } else {
                                 for (int j = 0; j < figs.size(); j++) {
-                                        figs.get(j).borderColor = figs.get(j).borderColor;
-                                    }
+                                    figs.get(j).borderColor = figs.get(j).borderColor;
                                 }
                             }
-                            if (figuraSelecionada != null) {
-                                figs.remove(figuraSelecionada);
-                                figs.add(figuraSelecionada);
-                                auxSelecionada = figuraSelecionada;
-                                repaint();
-                            } else if (figuraSelecionada != auxSelecionada) {
-                                figs.remove(auxSelecionada);
-                                figs.add(auxSelecionada);
-                                repaint();
-
-                            }
                         }
+                        if (figuraSelecionada != null) {
+                            figs.remove(figuraSelecionada);
+                            figs.add(figuraSelecionada);
+                            auxSelecionada = figuraSelecionada;
+                            repaint();
+                        } else if (figuraSelecionada != auxSelecionada) {
+                            figs.remove(auxSelecionada);
+                            figs.add(auxSelecionada);
+                            repaint();
+
+                        }
+                    }
 
                 }
 
         );
         this.addMouseMotionListener(
                 new MouseAdapter(){
-                        public void mouseDragged(MouseEvent evt){
-                            if (figuraSelecionada != null) {
-                                int xDrag = evt.getX() - posicaoMouse.x;
-                                int yDrag = evt.getY() - posicaoMouse.y;
-                                figuraSelecionada.mover(xDrag, yDrag);
-                            }
-                            posicaoMouse = evt.getPoint();
-                            repaint();
+                    public void mouseDragged(MouseEvent evt){
+                        if (figuraSelecionada != null) {
+                            int xDrag = evt.getX() - posicaoMouse.x;
+                            int yDrag = evt.getY() - posicaoMouse.y;
+                            figuraSelecionada.mover(xDrag, yDrag);
                         }
+                        posicaoMouse = evt.getPoint();
+                        repaint();
+                    }
                 }
         );
 

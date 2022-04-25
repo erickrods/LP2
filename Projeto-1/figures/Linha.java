@@ -26,8 +26,7 @@ public class Linha extends Figure {
         this.linha = new Line2D.Float(x, y, h+x, w+y);
 
     }
-    public void print () {
-    }
+    public void print () {}
     @Override
     public void mover(int dx,int dy){
         super.mover(dx,dy);
@@ -35,6 +34,10 @@ public class Linha extends Figure {
         this.h += dx;
         this.y += dy;
         this.w += dy;
+    }
+    @Override
+    public boolean clicked(int x, int y) {
+        return this.linha.ptSegDist(x, y) <= 20;
     }
     @Override
     public void alterarTamanho(int x, int y){
@@ -53,5 +56,5 @@ public class Linha extends Figure {
         g2d.setStroke(new BasicStroke(grossuraPadrao));
         g2d.setColor(borderColor);
         g2d.draw(this.linha);
-        }
+    }
 }

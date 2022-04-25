@@ -15,9 +15,11 @@ public class Rect extends Figure {
         super(x, y, h, w, Color.BLACK, Color.WHITE);
         this.rect = new Rectangle(this.x, this.y, this.h, this.w);
     }
-        public void print () {
-        System.out.format("Retangulo de tamanho (%d,%d) na posicao (%d,%d).\n",
-            this.w, this.h, this.x, this.y);
+    public void print () {
+    }
+    @Override
+    public boolean clicked(int x, int y) {
+        return (x >= this.x) && (x <= this.x + this.w) && (y >= this.y) && (y <= this.y + this.h);
     }
     @Override
     public void paint (Graphics g) {

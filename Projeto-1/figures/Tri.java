@@ -25,29 +25,33 @@ public class Tri extends Figure {
         g2d.drawRect(this.x, this.y, this.w, this.h);
     }
     @Override
+    public boolean clicked(int x, int y) {
+        return this.triangulo.contains(x,y);
+    }
+    @Override
     public void paint (Graphics g) {
-            int xx = this.x;
-            int yx = this.y;
-            int xy = xx;
-            int yy = yx + this.h;
-            int xz = xx + this.w;
-            int yz = yx + this.h;
-            int xValores[] = {xx, xy, xz};
-            int yValores[] = {yx, yy, yz};
-            this.arrayX = xValores;
-            this.arrayY = yValores;
+        int xx = this.x;
+        int yx = this.y;
+        int xy = xx;
+        int yy = yx + this.h;
+        int xz = xx + this.w;
+        int yz = yx + this.h;
+        int xValores[] = {xx, xy, xz};
+        int yValores[] = {yx, yy, yz};
+        this.arrayX = xValores;
+        this.arrayY = yValores;
 
-            this.triangulo = new Polygon(arrayX, arrayY, 3);
-            Graphics2D g2d = (Graphics2D) g;
-            g2d.setStroke(new BasicStroke(grossuraPadrao));
-            g2d.setColor(borderColor);
-            g2d.drawPolygon(this.triangulo);
-            g2d.setColor(fillColor);
-            g2d.fillPolygon(this.triangulo);
+        this.triangulo = new Polygon(arrayX, arrayY, 3);
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setStroke(new BasicStroke(grossuraPadrao));
+        g2d.setColor(borderColor);
+        g2d.drawPolygon(this.triangulo);
+        g2d.setColor(fillColor);
+        g2d.fillPolygon(this.triangulo);
 
-        }
+    }
     public void print () {
         //System.out.format("Triangulo na posicao (%d,%d, %d).\n", int xx,int yx,int yz);
     }
-    
+
 }
