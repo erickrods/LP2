@@ -30,12 +30,11 @@ d - (carros/caminhonetes/caminhoes/)
 
 
 2 - Tocável
-a - Toque em x regiao executal y ação.
+a - Toque em x regiao para executar y ação.
 b - Ambos executam tarefas ao receber toques em locais específicos.
 c -
 public interface tocavel{
-    public boolean toque;
-    public int x,y;
+    public boolean toque(int x, int y);
 }
 
 d - Microondas e smartphone        
