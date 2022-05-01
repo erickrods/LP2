@@ -1,7 +1,8 @@
 1 - Veículos
 a - Caracteristicas de veículos.
 b - Coletar e aplicar carasctristicas de diferentes tipos de veículos.
-c - public class veiculo{
+c -
+public class veiculo{
     protected Color corVeiculo;
     protected int qPortas;
     protected int tracao;  //1-dianteira 2-traseira 3-integral
@@ -31,7 +32,8 @@ d - (carros/caminhonetes/caminhoes/)
 2 - Tocável
 a - Toque em x regiao executal y ação.
 b - Ambos executam tarefas ao receber toques em locais específicos.
-c - public interface tocavel{
+c -
+public interface tocavel{
     public boolean toque;
     public int x,y;
 }
