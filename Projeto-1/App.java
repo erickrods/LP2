@@ -108,7 +108,7 @@ class ListFrame extends JFrame {
                                 figuraSelecionada = figs.get(i);
                             } else {
                                 for (int j = 0; j < figs.size(); j++) {
-                                    figs.get(j).borderColor = figs.get(j).borderColor;
+                                    //figs.get(j).borderColor = figs.get(j).borderColor;
                                 }
                             }
                         }

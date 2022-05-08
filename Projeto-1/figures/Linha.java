@@ -6,9 +6,9 @@ import java.awt.geom.Line2D.Float;
 import java.util.Random;
 
 public class Linha extends Figure {
-    public int x, y;
-    public int h, w;
-    public Color borderColor;
+    private int x, y;
+    private int h, w;
+    private Color borderColor;
     Line2D linha;
 
 

@@ -4,7 +4,7 @@ import java.awt.*;
 
 public class Tri extends Figure {
     Polygon triangulo;
-    int arrayX[], arrayY[];
+    private int arrayX[], arrayY[];
 
     public Tri(int x, int y, int h, int w, Color borderColor, Color fillColor) {
         super(x, y, h, w, borderColor, fillColor);

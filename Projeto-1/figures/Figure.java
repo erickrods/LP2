@@ -8,10 +8,10 @@ import ivisible.*;
 
 public abstract class Figure implements IVisible{
 
-    public Color borderColor;
-    public Color fillColor;
-    public int x, y;
-    public int h, w;
+    protected Color borderColor;
+    protected Color fillColor;
+    protected int x, y;
+    protected int h, w;
     protected static float grossuraPadrao = 3.0f;
 
     protected Figure(int x, int y, int h, int w, Color borderColor, Color fillColor) {
