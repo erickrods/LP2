@@ -6,16 +6,13 @@ public class Tri extends Figure {
     Polygon triangulo;
     private int arrayX[], arrayY[];
 
+    public Tri(int x, int y, int h, int w) {
+        super(x, y, h, w,Color.BLACK, Color.WHITE);
+    }
+
     public Tri(int x, int y, int h, int w, Color borderColor, Color fillColor) {
         super(x, y, h, w, borderColor, fillColor);
-        int xx = this.x;
-        int yx = this.y;
-        int xy = xx;
-        int yy = yx + this.h;
-        int xz = xx + this.w;
-        int yz = yx + this.h;
-        int xValores[] = {xx, xy, xz};
-        int yValores[] = {yx, yy, yz};
+
     }
     @Override
     public void foco(Graphics g) {

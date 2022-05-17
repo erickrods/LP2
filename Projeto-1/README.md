@@ -11,6 +11,8 @@ r = Desenha um retângulo
 
 t = Desenha um triângulo
 
+Botões = Clicar no botão da figura que deseja e clicar onde quer que ela apareça
+
 ### Movimentar:
 
 ⇧ = Move figura 10 pixels para Cima
@@ -35,5 +37,5 @@ F1 = Aumenta tamanho da figura
 
 F2 = Dimunui tamanho da figura
 
-
+TAB = Troca de figura em foco
 

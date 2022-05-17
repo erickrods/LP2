@@ -18,6 +18,11 @@ public class Rect extends Figure {
     public void print () {
     }
     @Override
+    public void alterarTamanho(int x, int y){
+        this.h += x;
+        this.w += y;
+    }
+    @Override
     public boolean clicked(int x, int y) {
         return (x >= this.x) && (x <= this.x + this.w) && (y >= this.y) && (y <= this.y + this.h);
     }
