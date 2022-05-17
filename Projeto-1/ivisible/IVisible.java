@@ -4,5 +4,5 @@ import java.awt.*;
 
  public interface IVisible {
      boolean clicked(int x, int y);
-     void    paint(Graphics g,boolean b);
+     void    paint(Graphics g);
 }
