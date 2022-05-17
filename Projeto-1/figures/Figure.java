@@ -2,16 +2,18 @@ package figures;
 import java.awt.*;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.io.Serializable;
 
 import ivisible.*;
 
 
-public abstract class Figure implements IVisible{
+public abstract class Figure implements IVisible, Serializable {
 
     protected Color borderColor;
     protected Color fillColor;
-    protected int x, y;
-    protected int h, w;
+    public int x;
+    public int y;
+    public int h, w;
     protected static float grossuraPadrao = 3.0f;
 
     protected Figure(int x, int y, int h, int w, Color borderColor, Color fillColor) {
@@ -32,7 +34,7 @@ public abstract class Figure implements IVisible{
         this.y += dy;
     }
     public boolean clicked(int x, int y) {
-        return (x >= this.x) && (x <= this.x + this.h) && (y >= this.y) && (y <= this.y + this.h);
+        return (this.x <= x && x <= this.x + this.w && this.y<=y && y<=this.y+this.h);
     }
     public void foco(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -50,5 +52,8 @@ public abstract class Figure implements IVisible{
 
     public void corBorda(Color cor) {
         this.borderColor = cor;
+    }
+
+    public void paint(Graphics g, boolean b) {
     }
 }

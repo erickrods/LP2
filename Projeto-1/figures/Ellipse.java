@@ -20,6 +20,11 @@ public class Ellipse extends Figure {
         System.out.format("Elipse de tamanho (%d,%d) na posicao (%d,%d).\n", this.w, this.h, this.x, this.y);
     }
     @Override
+    public void alterarTamanho(int x, int y){
+        this.h += x;
+        this.w += y;
+    }
+    @Override
     public void paint (Graphics g) {
         this.ellipse = new Ellipse2D.Double(this.x, this.y, this.h, this.w);
         Graphics2D g2d = (Graphics2D) g;

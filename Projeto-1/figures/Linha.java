@@ -50,6 +50,13 @@ public class Linha extends Figure {
         this.borderColor = cor;
     }
     @Override
+    public void foco(Graphics g) {
+        Graphics2D g2d = (Graphics2D) g;
+        g2d.setStroke(new BasicStroke(grossuraPadrao));
+        g2d.setColor(Color.RED);
+        g2d.drawRect(this.x, this.y, this.h-x, this.w-y);
+    }
+    @Override
     public void paint (Graphics g) {
         this.linha = new Line2D.Float(this.x, this.y, this.h , this.w);
         Graphics2D g2d = (Graphics2D) g;

@@ -35,5 +35,4 @@ F1 = Aumenta tamanho da figura
 
 F2 = Dimunui tamanho da figura
 
-
-
+TAB = Troca de figura selecionada
