@@ -1,5 +1,3 @@
-import ivisible.IVisible;
-import figures.Figure;
 import java.awt.*;
 import ivisible.*;
 import figures.*;
