@@ -26,6 +26,20 @@ public class Tri extends Figure {
         return this.triangulo.contains(x,y);
     }
     @Override
+    public void alterarMouse(Point coordMouse, int dx, int dy) {
+        Point pointRedim = new Point(this.arrayX[2], this.arrayY[2]);
+        if (pointRedim.distance(coordMouse) <= 5) {
+            if (this.w + dx >= 10) {
+                this.w += dx;
+            }
+            if (this.h + dy >= 10) {
+                this.h += dy;
+            }
+        } else {
+            mover(dx, dy);
+        }
+    }
+    @Override
     public void paint (Graphics g) {
         int xx = this.x;
         int yx = this.y;

@@ -27,6 +27,20 @@ public class Rect extends Figure {
         return (x >= this.x) && (x <= this.x + this.w) && (y >= this.y) && (y <= this.y + this.h);
     }
     @Override
+    public void alterarMouse(Point coordMouse, int dx, int dy) {
+        Point pointRedim = new Point(this.x + this.w, this.y + this.h);
+        if (pointRedim.distance(coordMouse) <= 5) {
+            if (this.w + dx >= 10) {
+                this.w += dx;
+            }
+            if (this.h + dy >= 10) {
+                this.h += dy;
+            }
+        } else {
+            mover(dx, dy);
+        }
+    }
+    @Override
     public void paint (Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
         g2d.setStroke(new BasicStroke(grossuraPadrao/2));

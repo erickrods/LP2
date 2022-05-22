@@ -42,6 +42,8 @@ public abstract class Figure implements IVisible, Serializable {
         g2d.setColor(Color.RED);
         g2d.drawRect(this.x, this.y, this.h, this.w);
     }
+    public abstract void alterarMouse(Point coordMouse, int dx, int dy);
+
     public void alterarTamanho(int x, int y){
         this.h += x;
         this.w += y;

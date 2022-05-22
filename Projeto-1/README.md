@@ -39,3 +39,4 @@ F2 = Dimunui tamanho da figura
 
 TAB = Troca de figura em foco
 
+Clicar e arrastar no canto inferior direito = Redimensionar figura conforme a posição do cursor

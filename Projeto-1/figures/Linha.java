@@ -57,6 +57,22 @@ public class Linha extends Figure {
         g2d.drawRect(this.x, this.y, this.h-x, this.w-y);
     }
     @Override
+    public void alterarMouse(Point coordMouse, int dx, int dy) {
+        Point p1 = new Point(this.x, this.y);
+        Point p2 = new Point(this.h, this.w);
+        if (p1.distance(coordMouse) <= 10) {
+            this.x += dx;
+            this.y += dy;
+        } else if (p2.distance(coordMouse) <= 10) {
+            this.h += dx;
+            this.w += dy;
+        } else {
+            mover(dx, dy);
+        }
+
+        this.linha.setLine(p1, p2);
+    }
+    @Override
     public void paint (Graphics g) {
         this.linha = new Line2D.Float(this.x, this.y, this.h , this.w);
         Graphics2D g2d = (Graphics2D) g;

@@ -1,9 +1,10 @@
 import ivisible.IVisible;
 import figures.Figure;
 import java.awt.*;
+import ivisible.*;
 import figures.*;
 
-public class Button     {
+public class Button  implements IVisible {
 
     public int x, y;
     public int size = 50;
@@ -28,6 +29,8 @@ public class Button     {
         g2d.fillRect(this.x, this.y, this.size, this.size);
 
         this.figureButton.paint(g);
+    }
+    public void paint(Graphics g, boolean b) {
     }
     public void foco(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;

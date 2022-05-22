@@ -130,6 +130,8 @@ class ListFrame extends JFrame {
                                 }
                             } else {
                                 figuraSelecionada = figs.get((figs.indexOf(figuraSelecionada) + 1) % figs.size());
+                                figs.remove(figuraSelecionada);
+                                figs.add(figuraSelecionada);
                                 repaint();
                             }
                         }
@@ -198,9 +200,10 @@ class ListFrame extends JFrame {
                 new MouseAdapter() {
                     public void mouseDragged(MouseEvent evt) {
                         if (figuraSelecionada != null) {
+                            Point posicaoMouse2 = new Point(evt.getX(), evt.getY());
                             int xDrag = evt.getX() - posicaoMouse.x;
                             int yDrag = evt.getY() - posicaoMouse.y;
-                            figuraSelecionada.mover(xDrag, yDrag);
+                            figuraSelecionada.alterarMouse(posicaoMouse2,xDrag, yDrag);
                         }
                         posicaoMouse = evt.getPoint();
                         repaint();
@@ -216,7 +219,6 @@ class ListFrame extends JFrame {
     @Override
     public void paint(Graphics g) {
         super.paint(g);
-
 
         for (Figure figures : this.figs) {
             figures.paint(g);

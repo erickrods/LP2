@@ -25,6 +25,21 @@ public class Ellipse extends Figure {
         this.w += y;
     }
     @Override
+    public void alterarMouse(Point coordMouse, int dx, int dy) {
+        Point pointRedim = new Point(this.x + this.w, this.y + this.h);
+        if (pointRedim.distance(coordMouse) <= 5) {
+            if (this.w + dx >= 10) {
+                this.w += dx;
+            }
+            if (this.h + dy >= 10) {
+                this.h += dy;
+            }
+        } else {
+            mover(dx, dy);
+        }
+        this.ellipse.setFrame(this.x, this.y, this.h, this.w);
+    }
+    @Override
     public void paint (Graphics g) {
         this.ellipse = new Ellipse2D.Double(this.x, this.y, this.h, this.w);
         Graphics2D g2d = (Graphics2D) g;
