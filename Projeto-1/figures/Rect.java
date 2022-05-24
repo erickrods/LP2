@@ -24,21 +24,38 @@ public class Rect extends Figure {
     }
     @Override
     public boolean clicked(int x, int y) {
-        return (x >= this.x) && (x <= this.x + this.w) && (y >= this.y) && (y <= this.y + this.h);
+        return (x >= this.x) && (x <= this.x + this.h) && (y >= this.y) && (y <= this.y + this.w);
     }
     @Override
     public void alterarMouse(Point coordMouse, int dx, int dy) {
-        Point pointRedim = new Point(this.x + this.w, this.y + this.h);
-        if (pointRedim.distance(coordMouse) <= 5) {
-            if (this.w + dx >= 10) {
-                this.w += dx;
+        Point pointRedim = new Point((this.x + this.w) / 2, this.y);
+        Point pointRedim2 = new Point((this.x + this.w) / 2, this.y + this.h);
+        Point pointRedim3 = new Point(this.x, (this.y + this.h) / 2);
+        Point pointRedim4 = new Point(this.x + this.w, (this.y + this.h) / 2);
+
+        if (pointRedim.distance(coordMouse) >= 12) {
+            if (this.w + dy >= 60) {
+                this.w += dy;
             }
-            if (this.h + dy >= 10) {
-                this.h += dy;
+        }
+        if (pointRedim2.distance(coordMouse) >= 12) {
+            if (this.w + dy >= 60) {
+                this.w += dy;
+            }
+        }
+        if (pointRedim3.distance(coordMouse) >= 12) {
+            if (this.h + dx >= 60) {
+                this.h += dx;
+            }
+        }
+        if (pointRedim4.distance(coordMouse) >= 12) {
+            if (this.h + dx >= 60) {
+                this.h += dx;
             }
         } else {
             mover(dx, dy);
         }
+        this.rect.setFrame(this.x, this.y, this.h, this.w);
     }
     @Override
     public void paint (Graphics g) {

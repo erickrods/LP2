@@ -22,6 +22,7 @@ class ListFrame extends JFrame {
     Figure figuraSelecionada = null;
     Figure auxSelecionada = null;
     Point posicaoMouse = null;
+    Point posicaoMouse3 = new Point(0, 0);
     ArrayList<Button> buttons = new ArrayList<>();
     Button botaoSelecionado = null;
     Random aleatoria = new Random();
@@ -168,6 +169,12 @@ class ListFrame extends JFrame {
                                     clickBotao = true;
                                 }
                             }
+                           /* if (figuraSelecionada != null) {
+                                Point posicaoMouse2 = new Point(evt.getX(), evt.getY());
+                                int xDrag = evt.getX() - posicaoMouse.x;
+                                int yDrag = evt.getY() - posicaoMouse.y;
+                                figuraSelecionada.alterarMouse(posicaoMouse,xDrag, yDrag);
+                            }*/
 
                             if (clickBotao == false) {
                                 switch (botaoSelecionado.buttonIndex) {
@@ -191,6 +198,7 @@ class ListFrame extends JFrame {
                                 }
                                 repaint();
                                 botaoSelecionado = null;
+                                Point posicaoMouse3 = new Point(evt.getX(), evt.getY());
                             }
                         }
                     }
@@ -198,16 +206,20 @@ class ListFrame extends JFrame {
         );
         this.addMouseMotionListener(
                 new MouseAdapter() {
+                    public void mouseMoved(MouseEvent evt){
+                        posicaoMouse3.x = evt.getX();
+                        posicaoMouse3.y = evt.getY();
+                    }
                     public void mouseDragged(MouseEvent evt) {
                         if (figuraSelecionada != null) {
                             Point posicaoMouse2 = new Point(evt.getX(), evt.getY());
-                            int xDrag = evt.getX() - posicaoMouse.x;
-                            int yDrag = evt.getY() - posicaoMouse.y;
-                            figuraSelecionada.alterarMouse(posicaoMouse2,xDrag, yDrag);
+                            int xDrag = evt.getX() - posicaoMouse3.x;
+                            int yDrag = evt.getY() - posicaoMouse3.y;
+                            figuraSelecionada.alterarMouse(posicaoMouse3,xDrag, yDrag);
                         }
                         posicaoMouse = evt.getPoint();
+                        posicaoMouse3 = evt.getPoint();
                         repaint();
-
                     }
                 }
         );

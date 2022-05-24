@@ -7,13 +7,14 @@ public class Tri extends Figure {
     private int arrayX[], arrayY[];
 
     public Tri(int x, int y, int h, int w) {
-        super(x, y, h, w,Color.BLACK, Color.WHITE);
+        super(x, y, h, w, Color.BLACK, Color.WHITE);
     }
 
     public Tri(int x, int y, int h, int w, Color borderColor, Color fillColor) {
         super(x, y, h, w, borderColor, fillColor);
 
     }
+
     @Override
     public void foco(Graphics g) {
         Graphics2D g2d = (Graphics2D) g;
@@ -21,20 +22,28 @@ public class Tri extends Figure {
         g2d.setColor(Color.RED);
         g2d.drawRect(this.x, this.y, this.w, this.h);
     }
+
     @Override
     public boolean clicked(int x, int y) {
-        return this.triangulo.contains(x,y);
+        return this.triangulo.contains(x, y);
     }
+
     @Override
     public void alterarMouse(Point coordMouse, int dx, int dy) {
-        Point pointRedim = new Point(this.arrayX[2], this.arrayY[2]);
-        if (pointRedim.distance(coordMouse) <= 5) {
-            if (this.w + dx >= 10) {
+        Point pointRedim = new Point(this.arrayX[0], this.arrayY[0]);
+        Point pointRedim2 = new Point(this.arrayX[1], this.arrayY[1]);
+        Point pointRedim3 = new Point(this.arrayX[2], this.arrayY[2]);
+
+        if (pointRedim.distance(coordMouse) >= 15) {
+            if (this.w + dx >= 60) {
                 this.w += dx;
             }
-            if (this.h + dy >= 10) {
-                this.h += dy;
+        } else if (pointRedim.distance(coordMouse) >= 15) {
+            if (this.w + dx >= 60) {
+                this.w += dx;
             }
+        } else if (this.w + dx >= 60) {
+            this.w += dx;
         } else {
             mover(dx, dy);
         }

@@ -58,19 +58,22 @@ public class Linha extends Figure {
     }
     @Override
     public void alterarMouse(Point coordMouse, int dx, int dy) {
-        Point p1 = new Point(this.x, this.y);
-        Point p2 = new Point(this.h, this.w);
-        if (p1.distance(coordMouse) <= 10) {
-            this.x += dx;
-            this.y += dy;
-        } else if (p2.distance(coordMouse) <= 10) {
-            this.h += dx;
-            this.w += dy;
+        Point pointRedim = new Point(this.x, this.y);
+        Point pointRedim2 = new Point(this.h, this.w);
+        if (pointRedim.distance(coordMouse) <= 15) {
+            if (this.h + dx >= 60) {
+                //this.x += dy;
+                this.y += dy;
+            }
+        } else if (pointRedim2.distance(coordMouse) <= 15) {
+            if (this.h + dx >= 60) {
+                this.h += dx;
+                //this.w += dx;
+            }
         } else {
             mover(dx, dy);
         }
-
-        this.linha.setLine(p1, p2);
+        this.linha.setLine(pointRedim, pointRedim2);
     }
     @Override
     public void paint (Graphics g) {

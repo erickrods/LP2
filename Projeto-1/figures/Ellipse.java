@@ -6,6 +6,7 @@ import java.awt.geom.Ellipse2D.Double;
 
 public class Ellipse extends Figure {
     Ellipse2D ellipse;
+    //Ellipse2D isso;
 
     public Ellipse (int x, int y, int h, int w, Color borderColor, Color fillColor) {
         super(x, y, h, w, borderColor, fillColor);
@@ -26,13 +27,29 @@ public class Ellipse extends Figure {
     }
     @Override
     public void alterarMouse(Point coordMouse, int dx, int dy) {
-        Point pointRedim = new Point(this.x + this.w, this.y + this.h);
-        if (pointRedim.distance(coordMouse) <= 5) {
-            if (this.w + dx >= 10) {
-                this.w += dx;
+        Point pointRedim = new Point((this.x+this.w)/2,this.y);
+        Point pointRedim2 = new Point((this.x+this.w)/2,this.y+this.h);
+        Point pointRedim3 = new Point(this.x,(this.y+this.h)/2);
+        Point pointRedim4 = new Point(this.x+this.w,(this.y+this.h)/2);         //Point mouse com algu erro
+
+        if (pointRedim.distance(coordMouse) >= 12) {
+            if (this.w + dy >= 60) {
+                this.w += dy;
             }
-            if (this.h + dy >= 10) {
-                this.h += dy;
+        }
+        if (pointRedim2.distance(coordMouse) >= 12) {
+            if (this.w + dy >= 60) {
+                this.w += dy;
+            }
+        }
+        if (pointRedim3.distance(coordMouse) >= 12) {
+            if (this.h + dx >= 60) {
+                this.h += dx;
+            }
+        }
+        if (pointRedim4.distance(coordMouse) >= 12) {
+            if (this.h + dx >= 60) {
+                this.h += dx;
             }
         } else {
             mover(dx, dy);
@@ -48,5 +65,6 @@ public class Ellipse extends Figure {
         g2d.draw(ellipse);
         g2d.setColor(fillColor);
         g2d.fill(ellipse);
+        this.ellipse = new Ellipse2D.Double(this.x,this.y,this.h,this.w);
     }
 }
