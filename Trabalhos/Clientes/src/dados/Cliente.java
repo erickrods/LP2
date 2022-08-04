@@ -1,0 +1,67 @@
+package dados;
+
+public class Cliente
+{
+	private int codigo;
+	private String nome;
+	private String cpf;
+	private int telefone;
+	
+
+
+	public void cliente(int codigo, String nome,String cpf, int telefone) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.telefone = telefone;
+		
+	}
+	
+	public void cliente() {
+		
+
+	}
+	public void verificaNome(String nome) {
+		if (this.nome.equals(nome)){
+			System.out.println("Iguais");
+		}else
+			System.out.println("Distintas");
+		
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public void setTelefone(int telefone) {
+		this.telefone = telefone;
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public int getTelefone() {
+		return telefone;
+	}
+	public String toString() {
+		return "Cód:"+this.codigo+"\nNome:"+this.nome+"\nCPF:"+this.cpf+"\nTelefone:"+this.telefone;
+		
+	}
+}
