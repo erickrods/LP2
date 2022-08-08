@@ -1,15 +1,15 @@
 package dados;
 
-public class Clientes
+public class Cliente
 {
 	private int codigo;
 	private String nome;
 	private String cpf;
-	private String telefone;
+	private int telefone;
 	
 
 
-	public void clientes(int codigo, String nome,String cpf, String telefone) {
+	public void cliente(int codigo, String nome,String cpf, int telefone) {
 		this.codigo = codigo;
 		this.nome = nome;
 		this.cpf = cpf;
@@ -17,18 +17,9 @@ public class Clientes
 		
 	}
 	
-	public void clientes() {
+	public void cliente() {
 		
 
-	}
-	public void acharNome(String nome,int tam) {
-		/**for (int i=0;i<tam;i++) {
-			
-		}**/
-	}
-	
-	public String exibirInfo() {	
-		return null;
 	}
 	public void verificaNome(String nome) {
 		if (this.nome.equals(nome)){
@@ -50,7 +41,7 @@ public class Clientes
 		this.cpf = cpf;
 	}
 
-	public void setTelefone(String telefone) {
+	public void setTelefone(int telefone) {
 		this.telefone = telefone;
 	}
 
@@ -66,7 +57,7 @@ public class Clientes
 		return cpf;
 	}
 
-	public String getTelefone() {
+	public int getTelefone() {
 		return telefone;
 	}
 	public String toString() {
