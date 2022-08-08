@@ -1,0 +1,25 @@
+package principal;
+import java.util.Scanner;
+
+import nomes.NomeString;
+import stringUtils.StringUtilsLista;
+
+public class Principal {
+
+	public static void main(String[] args) {
+		String nome1;// = null;
+		int quant;
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("Entre com o primeiro nome:");
+		nome1 = input.next();
+		System.out.print("Entre com a quantidade:");
+		quant = input.nextInt();
+		// TODO Auto-generated method stub
+		//StringUtilsLista lista = new StringUtilsLista(nome1);
+		StringUtilsLista.repetir(nome1,quant);
+
+
+	}
+
+}

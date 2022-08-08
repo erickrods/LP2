@@ -1,0 +1,17 @@
+package stringUtils;
+
+public class StringUtilsLista {
+	String palavra;
+	public StringUtilsLista(String nome1) {
+		this.palavra = nome1;		
+	}
+	public static void repetir(String nome1,int repet) {
+		int i=0;
+		for(i=0;i=repet;i++)
+		{
+			System.out.print("nome1");
+		}
+		
+	}
+
+}

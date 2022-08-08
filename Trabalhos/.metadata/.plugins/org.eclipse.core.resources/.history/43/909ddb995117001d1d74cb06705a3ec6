@@ -1,0 +1,9 @@
+package nomes;
+
+public class NomeString {
+	String nome1;
+	String nome2;
+	String nome3;
+	
+
+}

@@ -1,0 +1,81 @@
+package dados;
+import principal.Main.*;
+public class Clientes
+{
+	private int codigo;
+	private String nome;
+	private String cpf;
+	private String telefone;
+	
+
+
+	public void clientes(int codigo, String nome,String cpf, String telefone) {
+		this.codigo = codigo;
+		this.nome = nome;
+		this.cpf = cpf;
+		this.telefone = telefone;
+		
+	}
+	
+	public void clientes() {
+		
+
+	}
+	public Object acharNome() {
+		//Object?? bem maneiro... nem sabia quie essa porra existia.
+		return this.clientes(int codigo, String nome,String cpf, String telefone);
+		//Fazer um for  pra percorrer todo o vetor e comparar com o equals
+		//Daí ja terei o resultado necessario para completar tal tarefa.
+		//return Clientes[i];
+		//return this.nome;
+	}
+	public String exibirInfo() {
+		
+		//Viajei... é só buscar pelo código.
+		return null;
+		// Usar o achar nome e depois imprimir 
+	}
+	public void verificaNome(String nome) {
+		if (this.nome.equals(nome)){
+			System.out.println("Iguais");
+		}else
+			System.out.println("Distintas");
+		
+	}
+
+	public void setCodigo(int codigo) {
+		this.codigo = codigo;
+	}
+
+	public void setNome(String nome) {
+		this.nome = nome;
+	}
+
+	public void setCpf(String cpf) {
+		this.cpf = cpf;
+	}
+
+	public void setTelefone(String telefone) {
+		this.telefone = telefone;
+	}
+
+	public int getCodigo() {
+		return codigo;
+	}
+
+	public String getNome() {
+		return nome;
+	}
+
+	public String getCpf() {
+		return cpf;
+	}
+
+	public String getTelefone() {
+		return telefone;
+	}
+	public String toString() {
+		return "Cód:"+this.codigo+"\nNome:"+this.nome+"\nCPF:"+this.cpf+"\nTelefone:"+this.telefone;
+		
+	}
+}

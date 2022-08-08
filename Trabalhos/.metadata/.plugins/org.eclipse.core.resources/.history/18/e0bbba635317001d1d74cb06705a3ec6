@@ -1,0 +1,25 @@
+package Principal;
+
+import java.util.Scanner;
+
+import nomes.NomeString;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String nome1;
+		String nome2;
+		String nome3;
+		// TODO Auto-generated method stub
+		NomeString nomes = new NomeString(String nome1 , String nome2, String nome3);
+		Scanner input = new Scanner(System.in);
+		System.out.println("Entre com o primeiro nome:");
+		
+		System.out.println("Entre com o segundo nome:");
+		System.out.println("Entre com o terceiro nome:");
+
+		
+
+	}
+
+}

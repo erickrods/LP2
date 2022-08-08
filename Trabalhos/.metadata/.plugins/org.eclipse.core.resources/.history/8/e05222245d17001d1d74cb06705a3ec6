@@ -1,0 +1,12 @@
+package stringUtils;
+
+public class StringUtilsLista {
+	String nome1;
+	public StringUtilsLista(String nome1) {
+		this.nome1 = nome1;		
+	}
+	public static void repetir(String nome1,int repet) {
+		
+	}
+
+}

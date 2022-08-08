@@ -1,0 +1,55 @@
+package principal;
+import java.util.*;
+import dados.Clientes;
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		int i=0;
+		int controle = 0;
+		int quant =50;
+		Clientes[] clientes;
+		clientes = new Clientes[50];
+		/**for (int h=0;h<50;h++) {
+			clientes[h] = new Clientes();
+		}**/
+		/**int k=0;
+		for (int j=0;j<50;j++) {
+			System.out.println(clientes[j]+"num:"+k);
+			k++;
+		}**/
+		Scanner sc = new Scanner(System.in);
+		do {
+				System.out.println("1 - Cadastrar");
+				System.out.println("2 - Buscar por cliente");
+				System.out.println("3 - Exibir dados");
+				System.out.println("4 - Sair");
+				controle = sc.nextInt();
+		
+				if (controle==1) {
+					clientes[i] = new Clientes();
+					System.out.print("\nCódigo:");
+					clientes[i].setCodigo(sc.nextInt());
+					System.out.print("\nNome:");
+					clientes[i].setNome(sc.next());
+					System.out.print("\nCPF:");
+					clientes[i].setCpf(sc.next());
+					System.out.print("\nTelefone:");
+					clientes[i].setTelefone(sc.next());
+					i++;
+					continue;
+				}else if (controle==2) {
+					
+				}else if (controle==3) {
+					
+				}
+					System.out.print("lol");
+					//break;
+				}while (controle==4 & i<50); 
+		
+	}
+		
+		
+}
+
