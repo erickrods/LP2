@@ -21,11 +21,6 @@ public class Clientes
 		
 
 	}
-	public void acharNome(String nome,int tam) {
-		/**for (int i=0;i<tam;i++) {
-			
-		}**/
-	}
 	
 	public String exibirInfo() {	
 		return null;
