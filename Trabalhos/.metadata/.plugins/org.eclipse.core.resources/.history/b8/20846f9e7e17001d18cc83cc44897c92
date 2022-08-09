@@ -1,0 +1,25 @@
+package stringUtils;
+public class StringUtilsLista {
+	String palavra;
+	public StringUtilsLista(String nome1) {
+		this.palavra = nome1;		
+	}
+	public static void repetir(String nome1,int quant) {
+		String repeated = nome1.repeat(quant);
+		System.out.print(repeated);
+		
+	}
+	public static void contaRepeticao(String palavra,char quant) {
+		int totalrep=0;
+		char temp;
+		for (int i = 0; i < palavra.length(); i++) {
+
+	            temp = palavra.charAt(i);
+				if (temp == quant)
+	                totalrep++;
+	        }
+		System.out.println("Quantidade de repetiçoes: "+totalrep);
+		
+	}
+
+}

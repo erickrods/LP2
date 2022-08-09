@@ -7,15 +7,19 @@ public class Main {
 	public static void main(String[] args) {
 		String nome1;// = null;
 		int quant;
-		// TODO Auto-generated method stub
+		char letra;
+		String palavra;
 		Scanner input = new Scanner(System.in);
-		System.out.print("Entre com o primeiro nome:");
-		nome1 = input.next();
-		System.out.print("Entre com a quantidade:");
+		System.out.print("Entre com a palavra a ser repetida:");
+		palavra = input.next();
+		System.out.print("Numero de repeticoes:");
 		quant = input.nextInt();
-		// TODO Auto-generated method stub
-		//StringUtilsLista lista = new StringUtilsLista(nome1);
-		StringUtilsLista.repetir(nome1,quant);
+		System.out.print("Entre com o nome:");
+		nome1 = input.next();
+		System.out.print("Letra a comparar:");
+		letra = input.next().charAt(0);
+		StringUtilsLista.repetir(palavra,quant);
+		StringUtilsLista.contaRepeticao(nome1,letra);
 
 
 	}

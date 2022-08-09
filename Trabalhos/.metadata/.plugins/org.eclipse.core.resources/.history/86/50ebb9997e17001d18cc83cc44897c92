@@ -1,0 +1,26 @@
+package principal;
+import java.util.Scanner;
+import stringUtils.StringUtilsLista;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String nome1;// = null;
+		int quant;
+		char letra;
+		Scanner input = new Scanner(System.in);
+		System.out.print("Entre com o nome:");
+		nome1 = input.next();
+		System.out.print("Letra a comparar:");
+		quant = input.nextInt();
+		System.out.print("Entre com o nome:");
+		nome1 = input.next();
+		System.out.print("Letra a comparar:");
+		letra = input.next().charAt(0);
+		StringUtilsLista.repetir(nome1,quant);
+		StringUtilsLista.contaRepeticao(nome1,letra);
+
+
+	}
+
+}

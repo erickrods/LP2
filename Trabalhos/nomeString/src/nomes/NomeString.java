@@ -29,7 +29,6 @@ public class NomeString {
 		this.nome3 = nome3;
 	}
 	public String rubrica(String nome1,String nome2,String nome3) {
-		//String nomeTemp;
 		return  nome1.toUpperCase().charAt(0) +"."+ nome2.toUpperCase().charAt(0)+"."+nome3.substring(0,1).toUpperCase()+nome3.substring(1).toLowerCase();
 		}
 

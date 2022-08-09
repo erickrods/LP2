@@ -1,0 +1,34 @@
+package principal;
+import java.util.Scanner;
+import stringUtils.StringUtilsLista;
+
+public class Main {
+
+	public static void main(String[] args) {
+		String nome1;// = null;
+		int quant;
+		String letra;
+		// TODO Auto-generated method stub
+		Scanner input = new Scanner(System.in);
+		System.out.print("Entre com o nome:");
+		nome1 = input.next();
+		System.out.print("Letra a comparar:");
+		quant = input.nextInt();
+		System.out.print("Entre com o nome:");
+		nome1 = input.next();
+		System.out.print("Letra a comparar:");
+		letra = input.next();
+		// TODO Auto-generated method stub
+		//StringUtilsLista lista = new StringUtilsLista(nome1);
+		StringUtilsLista.repetir(nome1,quant);
+		StringUtilsLista.contaRepeticao(nome1,letra);
+
+
+	}
+
+	private static void contaRepeticao(String nome1, int quant) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
