@@ -20,7 +20,8 @@ public class Main {
 		nome3 = input.next();
 		NomeString nomes = new NomeString(nome1, nome2, nome3);
 		System.out.println(nomes.rubrica(nome1, nome2, nome3));
-		
+		System.out.println(nomes.assinatura());
+
 
 		
 

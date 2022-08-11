@@ -28,8 +28,12 @@ public class NomeString {
 	public void setNome3(String nome3) {
 		this.nome3 = nome3;
 	}
-	public String rubrica(String nome1,String nome2,String nome3) {
-		return  nome1.toUpperCase().charAt(0) +"."+ nome2.toUpperCase().charAt(0)+"."+nome3.substring(0,1).toUpperCase()+nome3.substring(1).toLowerCase();
+	public String assinatura(){
+			return  this.nome1.toUpperCase().charAt(0) +"."+ this.nome2.toUpperCase().charAt(0)+"."+this.nome3.substring(0,1).toUpperCase()+this.nome3.substring(1).toLowerCase();
 		}
+	public String rubrica(String nome1,String nome2,String nome3) {
+		return  nome1.toLowerCase().charAt(0)+""+ nome2.toLowerCase().charAt(0)+""+ nome3.toLowerCase().charAt(0);
+		}
+	
 
 }
