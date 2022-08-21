@@ -71,7 +71,7 @@ public class TestarFilme {
 				 default:
 				   System.out.println("O número escolhido é inválido!");
 			}
-		} while(controle!=3);// && j!=0);
+		} while(controle!=3);
 	}
 
 }
