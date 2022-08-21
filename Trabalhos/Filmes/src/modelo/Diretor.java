@@ -33,7 +33,7 @@ public class Diretor {
 	}
 	@Override
 	public String toString() {
-		return "\nNome:" + nome + "\nExperiencia:" + exp + "\nOrigem:" + origem;
+		return "\nNome do diretor:" + nome + "\nExperiencia:" + exp + "\nOrigem:" + origem;
 	}
 
 }

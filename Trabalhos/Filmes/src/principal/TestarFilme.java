@@ -1,8 +1,8 @@
 package principal;
 
 import java.util.Scanner;
-
 import modelo.Diretor;
+import modelo.Filme;
 
 public class TestarFilme {
 
@@ -10,49 +10,68 @@ public class TestarFilme {
 		int controle;
 		int contArray=0;
 		Scanner input = new Scanner(System.in);
-		System.out.println("Quantidade de filmes a cadastrar");
+		System.out.println("\nQuantidade de filmes a cadastrar");
 		int quantFilmes = input.nextInt();
-		
+		Filme[] filmes = new Filme[quantFilmes];
 		do{
-			System.out.println("1 - Cadastrar");
-			System.out.println("2 - Comparar duração de voo");
-			System.out.println("3 - Comparar origem");
-			System.out.println("4 - Sair");
+			System.out.println("\n1 - Cadastrar Filme");
+			System.out.println("2 - Pesquisar por titulo");
+			System.out.println("3 - Sair");
 			controle = input.nextInt();
 			switch (controle) {
 				 case 1:
-				   if (contArray>quantFilmes) {
-						System.out.println("Quantidade máxima de cadastro atingida.");
+				   if (contArray+1>quantFilmes) {
+						System.out.println("Quantidade máxima de cadastros atingida.");	 
 					}else {
-						voo[contArray] = new Voo(entry, null, null, entry, entry);
-						System.out.print("\nCódigo:");
-						voo[contArray].setCodigo(input.nextInt());
+						filmes[contArray] = new Filme();
+						Diretor diretor = new Diretor();
 						input.nextLine();
-						System.out.print("\nOrigem:");
-						voo[contArray].setOrigem(input.nextLine());
-						System.out.print("\nDuracao do voo:");
-						voo[contArray].setTempoDeVoo(input.nextInt());
+						System.out.print("\nTitulo:");
+						filmes[contArray].setTitulo(input.nextLine());
+						//input.nextLine();
+						System.out.print("\nDescricao:");
+						filmes[contArray].setDescricao(input.nextLine());
+						System.out.print("\nDuracao do filme:");
+						filmes[contArray].setDuracaoMin(input.nextInt());
 						input.nextLine();
-						System.out.print("\nDestino:");
-						voo[contArray].setDestino(input.nextLine());
-						System.out.print("\nQuantidade de passageiros:");
-						voo[contArray].setQuant(input.nextInt());
+						System.out.print("\nDiretor:");
+						diretor.setNome(input.nextLine());
+						System.out.print("\nAnos de experiencia do diretor:");
+						diretor.setExp(input.nextInt());
+						input.nextLine();
+						System.out.print("\nOrigem do diretor:");
+						diretor.setOrigem(input.nextLine());
+						filmes[contArray].setDiretor(diretor);
 						contArray++;
-						System.out.println(voo[contArray-1]);
 						break;
 					}
-				 case 2: 
+				   break;
+				 case 2:
+					 String comparaTitulo;
+					 input.nextLine();
+					 System.out.print("\nTitulo a ser procurado:");
+					 comparaTitulo = input.nextLine();
+					 int contTitulo=0;
+					 for (int h=0;h<contArray;h++) {
+						 if (filmes[h].comparaTitulo(comparaTitulo)) {
+							 System.out.print(filmes[h]);
+							 contTitulo++;
+						 }
+					 }
+					 if (contTitulo==0) {
+						 System.out.print("\nNenhum filme com esse titulo!");
+					 }
 					 break;
 				 case 3:
-					
-				 case 4:
-					break;
+					 input.close();
+					 for(int v=0;v<contArray;v++) {
+							System.out.print("\n"+filmes[v].exibirDuracaoEmHoras(filmes[v].getDuracaoMin()));
+						}
+					 break;
 				 default:
 				   System.out.println("O número escolhido é inválido!");
-			   }
-		} while(controle!=4);
-		// TODO Auto-generated method stub
-
+			}
+		} while(controle!=3);// && j!=0);
 	}
 
 }

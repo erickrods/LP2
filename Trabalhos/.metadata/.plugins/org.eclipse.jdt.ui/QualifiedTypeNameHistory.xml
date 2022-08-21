@@ -2,4 +2,5 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="dados.Clientes"/>
     <fullyQualifiedTypeName name="dados.Fatura"/>
+    <fullyQualifiedTypeName name="modelo.Filme"/>
 </qualifiedTypeNameHistroy>
