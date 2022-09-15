@@ -3,4 +3,10 @@
     <fullyQualifiedTypeName name="dados.Clientes"/>
     <fullyQualifiedTypeName name="dados.Fatura"/>
     <fullyQualifiedTypeName name="modelo.Filme"/>
+    <fullyQualifiedTypeName name="modelo.Funcionario"/>
+    <fullyQualifiedTypeName name="modelo.Data"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="javax.xml.crypto.Data"/>
+    <fullyQualifiedTypeName name="modelo.Homem"/>
+    <fullyQualifiedTypeName name="modelo.Mulher"/>
 </qualifiedTypeNameHistroy>
